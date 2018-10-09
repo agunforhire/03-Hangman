@@ -80,7 +80,7 @@ function buttons() {
         listItem.onclick = function() {
             var userGuess = listItem.dataset.alphabet;
             guessed.push(userGuess);
-            document.getElementById('guessed').innerHTML = "Letters already guessed: " + guessed.join(" ");
+            document.getElementById('guessed').innerHTML = "Letters already guessed: " + incorrect.join(" ");
             
         // Checking the guess
         checkLetters(userGuess);
@@ -132,7 +132,7 @@ function gameUpdate() {
         
         var messageWin = alertWin[Math.floor(Math.random() * alertWin.length)];
         alert(messageWin);
-        alert("The word was " + compWord);
+        alert("You win! The word was " + compWord);
 
         document.getElementById("wins").innerHTML = "You have won " + winCounter + " game(s)";
 
@@ -147,7 +147,7 @@ function gameUpdate() {
         
         var messageLose = alertWin[Math.floor(Math.random() * alertLose.length)];
         alert(messageLose);
-        alert("The word was " + compWord);
+        alert("You lose. The word was " + compWord);
         
         
         document.getElementById("losses").innerHTML = "You have lost " + losses + " game(s)";
