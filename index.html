@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hangman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/main.css" />
+</head>
+<body>
+    <div class="col-md-8">
+        <div class = 'jumbotron'>
+            <div class = 'container-fluid'>
+                <h2><img src="assets/images/symbol1.jpg">A Spooky Witchy Hangman Game!<img src="assets/images/symbol2.jpg"> </h1>
+            </div>
+        </div>
+    <div class = "scoreBoard">
+        <ul class = "list-group">
+            <li class = "list-group-item">
+                <h3>Divine the signs and portents to guess the word!</h3>
+            </li>
+            <li>
+                <p id="word">Find the missing letters: </p>
+            </li>
+            <li class = "list-group-item">
+                <p id="guessed">Letters already guessed: </p>
+            </li>
+            <li class = "list-group-item">
+                <p id ="remaining">Guesses remaining: </p>
+            </li>
+            <li class = "list-group-item">
+                <p id="playSpace"></p>
+            </li>
+            <li class="list-group-item">
+                    <p id="wins">Wins</p>
+          
+                    <p id="losses">Losses</p>
+                    
+                    <p id="word"></p> 
+        </ul>
+    </div>
+    </div>
+        <div id="buttons" class="col-md-6">
+        
+        <p>Make a selection.</p>
+            
+        <ul></ul>
+    </div>
+<script src="assets/main.js"></script>
+</body>
+</html>
