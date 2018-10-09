@@ -3,7 +3,7 @@ var dictionary = ['WARLOCK', 'PAIMON', 'SOLOMON', 'GOETIA', 'BAPHOMET', 'BELIAL'
 var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var alertWrong = ["The signs grow dim", "You are befuddled by ancient magics", "The portents fade", "The shadows encroach"];
 var alertWin = ["The ancient ones are pleased with your triumph", "You have divined the signs and portents", "Your vision fills with light!"]
-var alertLose = ["Darkness swallows your vision", "OBLIVION!", "Pretty much the most grim parts of Revelations"]
+var alertLose = ["Darkness swallows your vision", "OBLIVION!", "Pretty much the more grim parts of Revelations"]
 
 //playSpace will include blanks spaces and correct guesses
 var playSpace = [] ;
@@ -32,16 +32,17 @@ function powerButton (){
     //Cludgey vanilla hack of the jQuery empty() method
     var emptyGuessed = document.getElementById('guessed');
     while(emptyGuessed.firstChild) emptyGuessed.removeChild(emptyGuessed.firstChild);
-
+//todo - Document not emptying all the way
 
     //resetting variables
     guesses = 10;
     playSpace = [];
     compLetters = [];
     guessed = [];
-    correctGuess = [];
-    incorrectGuess = [];
-    
+    correct = [];
+    incorrect = [];
+    userGuess = [];
+
     //choosing and new word and populating variables
     compWord = dictionary[Math.floor(Math.random() * dictionary.length)];
     compLetters = compWord.split("");
@@ -137,9 +138,10 @@ function gameUpdate() {
 
         powerButton();
     }
+// todo - Not triggering lost messages
 
     // If you've lost
-    else if (guesses == 0) {
+    else if (guesses === 0) {
         losses++;  
         document.getElementById("word").innerHTML = "The last word was " + compWord;
         
