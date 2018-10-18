@@ -5,3 +5,8 @@
 .container-fluid {
     background: white;
 }
+
+#image {
+    align-content: center;
+    float: right;   
+}

@@ -138,14 +138,14 @@ function gameUpdate() {
 
         powerButton();
     }
-// todo - Not triggering lost messages
+// Loss trigger
 
     // If you've lost
     else if (guesses === 0) {
         losses++;  
         document.getElementById("word").innerHTML = "The last word was " + compWord;
         
-        var messageLose = alertWin[Math.floor(Math.random() * alertLose.length)];
+        var messageLose = alertLose[Math.floor(Math.random() * alertLose.length)];
         alert(messageLose);
         alert("You lose. The word was " + compWord);
         
